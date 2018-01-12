@@ -129,6 +129,16 @@ regex = /^\w+/g; 	// matches any \w group or word character at start of string. 
 regex = /\w+.$/g;	// matches any word character at the end of string. ('nice.' in this case)
 regex = /nice.$/g;	// matches 'nice.' at the end of the string.
 
+//MODIFIERS 
+//misx
+//single line mode - s modifier which makes the dot(.) match all characters including line breaks is not supported
+// in javascript
+str = 'THis IS some text \nsome text this is \nlalalalalaaa \ntext';
+regex = /^\w+/g;	// without m modifier
+regex = /^\w+/gm;	// m is multi-line modifier; checks for the match in multiple lines
+regex = /[a-z]+/g;  // without i modifier
+regex = /[a-z]+/gi; // i is case-insensitive modifier; matches irrespective of case
+
 display(str, regex);
 
 /*
